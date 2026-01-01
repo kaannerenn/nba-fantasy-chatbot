@@ -17,3 +17,26 @@ Bu sistem, sadece genel NBA bilgisiyle değil, **Yahoo Fantasy API** üzerinden 
 * Python 3.10
 * [Yahoo Developer Hesabı](https://developer.yahoo.com/fantasysports/guide/) Yahoo Fantasy API erişimi için
 * [Yahoo Fantasy Hesabı](https://sports.yahoo.com) Verilerin çekileceği aktif bir NBA ligi üyeliği.
+
+## Kurulum
+
+Projeyi yerel ortamınızda ayağa kaldırmak için aşağıdaki adımları takip edin:
+
+### 1. Terminali açın ve repoyu klonlayın:
+```bash
+git clone https://github.com/kaannerenn/nba-fantasy-chatbot.git [directory name]
+```
+
+### 2.Proje dizinine ilerleyin:
+```bash
+cd [directory name]/nba-fantasy-chatbot
+```
+### 3.Conda ortamı oluşturun
+```bash
+conda create -n [environment name]
+conda activate [environment name]
+```
+### 4.Gerekli kütüphaneleri yükleyin
+```bash
+pip install -r requirements.txt
+```
