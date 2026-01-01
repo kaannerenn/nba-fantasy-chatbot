@@ -11,3 +11,9 @@ Bu sistem, sadece genel NBA bilgisiyle değil, **Yahoo Fantasy API** üzerinden 
 **2-Niyet Sınıflandırma (Intent Classification):** Kullanıcı sorularını analiz ederek; istatistik sorguları, takas analizleri veya selamlama niyetlerini birbirinden ayırıp her biri için optimize edilmiş cevapları sunmak.
 
 **3-Halüsinasyonu Engellemek:** RAG mimarisi sayesinde, modelin veri setinde bulunmayan bilgileri "uydurmasının" önüne geçerek sadece mevcut JSON verilerine sadık kalmasını sağlamak.
+
+## Gereksinimler
+* [VS Code](https://code.visualstudio.com/)
+* Python 3.10
+* [Yahoo Developer Hesabı](https://developer.yahoo.com/fantasysports/guide/) Yahoo Fantasy API erişimi için
+* [Yahoo Fantasy Hesabı](https://sports.yahoo.com) Verilerin çekileceği aktif bir NBA ligi üyeliği.
