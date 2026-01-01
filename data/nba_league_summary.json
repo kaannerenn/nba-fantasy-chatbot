@@ -1,0 +1,434 @@
+[
+    {
+        "team_name": "Kadıköy Bulls",
+        "weeks_counted": 10,
+        "totals": {
+            "PTS": 5499.0,
+            "REB": 1785.0,
+            "AST": 1365.0,
+            "ST": 357.0,
+            "BLK": 234.0,
+            "3PTM": 488.0,
+            "TO": 674.0,
+            "FGM/A": "2012/4173",
+            "FTM/A": "987/1187"
+        },
+        "averages": {
+            "PTS": 549.9,
+            "REB": 178.5,
+            "AST": 136.5,
+            "ST": 35.7,
+            "BLK": 23.4,
+            "3PTM": 48.8,
+            "TO": 67.4,
+            "FG%": 0.482,
+            "FT%": 0.832
+        },
+        "text_description": "Kadıköy Bulls takımı 10 hafta boyunca toplam 5499.0 sayı attı ve maç başına 549.9 ortalama yakaladı."
+    },
+    {
+        "team_name": "emircanyildirim",
+        "weeks_counted": 10,
+        "totals": {
+            "PTS": 5532.0,
+            "REB": 2136.0,
+            "AST": 1182.0,
+            "ST": 324.0,
+            "BLK": 232.0,
+            "3PTM": 584.0,
+            "TO": 669.0,
+            "FGM/A": "1919/3880",
+            "FTM/A": "1110/1441"
+        },
+        "averages": {
+            "PTS": 553.2,
+            "REB": 213.6,
+            "AST": 118.2,
+            "ST": 32.4,
+            "BLK": 23.2,
+            "3PTM": 58.4,
+            "TO": 66.9,
+            "FG%": 0.495,
+            "FT%": 0.77
+        },
+        "text_description": "emircanyildirim takımı 10 hafta boyunca toplam 5532.0 sayı attı ve maç başına 553.2 ortalama yakaladı."
+    },
+    {
+        "team_name": "HS4",
+        "weeks_counted": 10,
+        "totals": {
+            "PTS": 5092.0,
+            "REB": 1904.0,
+            "AST": 1071.0,
+            "ST": 364.0,
+            "BLK": 250.0,
+            "3PTM": 520.0,
+            "TO": 598.0,
+            "FGM/A": "1897/3858",
+            "FTM/A": "778/986"
+        },
+        "averages": {
+            "PTS": 509.2,
+            "REB": 190.4,
+            "AST": 107.1,
+            "ST": 36.4,
+            "BLK": 25.0,
+            "3PTM": 52.0,
+            "TO": 59.8,
+            "FG%": 0.492,
+            "FT%": 0.789
+        },
+        "text_description": "HS4 takımı 10 hafta boyunca toplam 5092.0 sayı attı ve maç başına 509.2 ortalama yakaladı."
+    },
+    {
+        "team_name": "Deniz Utkan's Primo Team",
+        "weeks_counted": 10,
+        "totals": {
+            "PTS": 4507.0,
+            "REB": 1844.0,
+            "AST": 925.0,
+            "ST": 281.0,
+            "BLK": 209.0,
+            "3PTM": 420.0,
+            "TO": 627.0,
+            "FGM/A": "1643/3469",
+            "FTM/A": "801/1016"
+        },
+        "averages": {
+            "PTS": 450.7,
+            "REB": 184.4,
+            "AST": 92.5,
+            "ST": 28.1,
+            "BLK": 20.9,
+            "3PTM": 42.0,
+            "TO": 62.7,
+            "FG%": 0.474,
+            "FT%": 0.788
+        },
+        "text_description": "Deniz Utkan's Primo Team takımı 10 hafta boyunca toplam 4507.0 sayı attı ve maç başına 450.7 ortalama yakaladı."
+    },
+    {
+        "team_name": "Haramball",
+        "weeks_counted": 10,
+        "totals": {
+            "PTS": 6210.0,
+            "REB": 2371.0,
+            "AST": 1436.0,
+            "ST": 406.0,
+            "BLK": 240.0,
+            "3PTM": 712.0,
+            "TO": 776.0,
+            "FGM/A": "2284/4767",
+            "FTM/A": "930/1170"
+        },
+        "averages": {
+            "PTS": 621.0,
+            "REB": 237.1,
+            "AST": 143.6,
+            "ST": 40.6,
+            "BLK": 24.0,
+            "3PTM": 71.2,
+            "TO": 77.6,
+            "FG%": 0.479,
+            "FT%": 0.795
+        },
+        "text_description": "Haramball takımı 10 hafta boyunca toplam 6210.0 sayı attı ve maç başına 621.0 ortalama yakaladı."
+    },
+    {
+        "team_name": "Experiment SZN",
+        "weeks_counted": 10,
+        "totals": {
+            "PTS": 5358.0,
+            "REB": 1762.0,
+            "AST": 1363.0,
+            "ST": 347.0,
+            "BLK": 144.0,
+            "3PTM": 681.0,
+            "TO": 604.0,
+            "FGM/A": "1878/3850",
+            "FTM/A": "921/1123"
+        },
+        "averages": {
+            "PTS": 535.8,
+            "REB": 176.2,
+            "AST": 136.3,
+            "ST": 34.7,
+            "BLK": 14.4,
+            "3PTM": 68.1,
+            "TO": 60.4,
+            "FG%": 0.488,
+            "FT%": 0.82
+        },
+        "text_description": "Experiment SZN takımı 10 hafta boyunca toplam 5358.0 sayı attı ve maç başına 535.8 ortalama yakaladı."
+    },
+    {
+        "team_name": "Ati and The Hippos",
+        "weeks_counted": 10,
+        "totals": {
+            "PTS": 5277.0,
+            "REB": 2079.0,
+            "AST": 1288.0,
+            "ST": 447.0,
+            "BLK": 167.0,
+            "3PTM": 613.0,
+            "TO": 612.0,
+            "FGM/A": "1899/4025",
+            "FTM/A": "866/1144"
+        },
+        "averages": {
+            "PTS": 527.7,
+            "REB": 207.9,
+            "AST": 128.8,
+            "ST": 44.7,
+            "BLK": 16.7,
+            "3PTM": 61.3,
+            "TO": 61.2,
+            "FG%": 0.472,
+            "FT%": 0.757
+        },
+        "text_description": "Ati and The Hippos takımı 10 hafta boyunca toplam 5277.0 sayı attı ve maç başına 527.7 ortalama yakaladı."
+    },
+    {
+        "team_name": "OCD 76ers",
+        "weeks_counted": 10,
+        "totals": {
+            "PTS": 5341.0,
+            "REB": 1590.0,
+            "AST": 1265.0,
+            "ST": 423.0,
+            "BLK": 240.0,
+            "3PTM": 546.0,
+            "TO": 610.0,
+            "FGM/A": "1932/4088",
+            "FTM/A": "931/1160"
+        },
+        "averages": {
+            "PTS": 534.1,
+            "REB": 159.0,
+            "AST": 126.5,
+            "ST": 42.3,
+            "BLK": 24.0,
+            "3PTM": 54.6,
+            "TO": 61.0,
+            "FG%": 0.473,
+            "FT%": 0.803
+        },
+        "text_description": "OCD 76ers takımı 10 hafta boyunca toplam 5341.0 sayı attı ve maç başına 534.1 ortalama yakaladı."
+    },
+    {
+        "team_name": "G-Force",
+        "weeks_counted": 10,
+        "totals": {
+            "PTS": 4528.0,
+            "REB": 1685.0,
+            "AST": 948.0,
+            "ST": 283.0,
+            "BLK": 224.0,
+            "3PTM": 449.0,
+            "TO": 521.0,
+            "FGM/A": "1648/3397",
+            "FTM/A": "783/1057"
+        },
+        "averages": {
+            "PTS": 452.8,
+            "REB": 168.5,
+            "AST": 94.8,
+            "ST": 28.3,
+            "BLK": 22.4,
+            "3PTM": 44.9,
+            "TO": 52.1,
+            "FG%": 0.485,
+            "FT%": 0.741
+        },
+        "text_description": "G-Force takımı 10 hafta boyunca toplam 4528.0 sayı attı ve maç başına 452.8 ortalama yakaladı."
+    },
+    {
+        "team_name": "Armageddon",
+        "weeks_counted": 10,
+        "totals": {
+            "PTS": 6010.0,
+            "REB": 1931.0,
+            "AST": 1468.0,
+            "ST": 399.0,
+            "BLK": 260.0,
+            "3PTM": 657.0,
+            "TO": 707.0,
+            "FGM/A": "2162/4613",
+            "FTM/A": "1029/1297"
+        },
+        "averages": {
+            "PTS": 601.0,
+            "REB": 193.1,
+            "AST": 146.8,
+            "ST": 39.9,
+            "BLK": 26.0,
+            "3PTM": 65.7,
+            "TO": 70.7,
+            "FG%": 0.469,
+            "FT%": 0.793
+        },
+        "text_description": "Armageddon takımı 10 hafta boyunca toplam 6010.0 sayı attı ve maç başına 601.0 ortalama yakaladı."
+    },
+    {
+        "team_name": "BurKING",
+        "weeks_counted": 10,
+        "totals": {
+            "PTS": 5431.0,
+            "REB": 2238.0,
+            "AST": 1355.0,
+            "ST": 362.0,
+            "BLK": 203.0,
+            "3PTM": 582.0,
+            "TO": 750.0,
+            "FGM/A": "1966/4352",
+            "FTM/A": "917/1177"
+        },
+        "averages": {
+            "PTS": 543.1,
+            "REB": 223.8,
+            "AST": 135.5,
+            "ST": 36.2,
+            "BLK": 20.3,
+            "3PTM": 58.2,
+            "TO": 75.0,
+            "FG%": 0.452,
+            "FT%": 0.779
+        },
+        "text_description": "BurKING takımı 10 hafta boyunca toplam 5431.0 sayı attı ve maç başına 543.1 ortalama yakaladı."
+    },
+    {
+        "team_name": "Cornex Studio",
+        "weeks_counted": 10,
+        "totals": {
+            "PTS": 5090.0,
+            "REB": 1616.0,
+            "AST": 809.0,
+            "ST": 308.0,
+            "BLK": 113.0,
+            "3PTM": 629.0,
+            "TO": 560.0,
+            "FGM/A": "1786/3900",
+            "FTM/A": "889/1073"
+        },
+        "averages": {
+            "PTS": 509.0,
+            "REB": 161.6,
+            "AST": 80.9,
+            "ST": 30.8,
+            "BLK": 11.3,
+            "3PTM": 62.9,
+            "TO": 56.0,
+            "FG%": 0.458,
+            "FT%": 0.829
+        },
+        "text_description": "Cornex Studio takımı 10 hafta boyunca toplam 5090.0 sayı attı ve maç başına 509.0 ortalama yakaladı."
+    },
+    {
+        "team_name": "Señor Popovich",
+        "weeks_counted": 10,
+        "totals": {
+            "PTS": 6387.0,
+            "REB": 2149.0,
+            "AST": 1339.0,
+            "ST": 360.0,
+            "BLK": 267.0,
+            "3PTM": 704.0,
+            "TO": 732.0,
+            "FGM/A": "2229/4799",
+            "FTM/A": "1225/1515"
+        },
+        "averages": {
+            "PTS": 638.7,
+            "REB": 214.9,
+            "AST": 133.9,
+            "ST": 36.0,
+            "BLK": 26.7,
+            "3PTM": 70.4,
+            "TO": 73.2,
+            "FG%": 0.464,
+            "FT%": 0.809
+        },
+        "text_description": "Señor Popovich takımı 10 hafta boyunca toplam 6387.0 sayı attı ve maç başına 638.7 ortalama yakaladı."
+    },
+    {
+        "team_name": "Pegasus Kozyatağı",
+        "weeks_counted": 10,
+        "totals": {
+            "PTS": 6201.0,
+            "REB": 1994.0,
+            "AST": 1296.0,
+            "ST": 309.0,
+            "BLK": 150.0,
+            "3PTM": 512.0,
+            "TO": 769.0,
+            "FGM/A": "2266/4531",
+            "FTM/A": "1157/1431"
+        },
+        "averages": {
+            "PTS": 620.1,
+            "REB": 199.4,
+            "AST": 129.6,
+            "ST": 30.9,
+            "BLK": 15.0,
+            "3PTM": 51.2,
+            "TO": 76.9,
+            "FG%": 0.5,
+            "FT%": 0.809
+        },
+        "text_description": "Pegasus Kozyatağı takımı 10 hafta boyunca toplam 6201.0 sayı attı ve maç başına 620.1 ortalama yakaladı."
+    },
+    {
+        "team_name": "Morooks",
+        "weeks_counted": 10,
+        "totals": {
+            "PTS": 5016.0,
+            "REB": 1705.0,
+            "AST": 1059.0,
+            "ST": 348.0,
+            "BLK": 178.0,
+            "3PTM": 552.0,
+            "TO": 495.0,
+            "FGM/A": "1754/3808",
+            "FTM/A": "956/1154"
+        },
+        "averages": {
+            "PTS": 501.6,
+            "REB": 170.5,
+            "AST": 105.9,
+            "ST": 34.8,
+            "BLK": 17.8,
+            "3PTM": 55.2,
+            "TO": 49.5,
+            "FG%": 0.461,
+            "FT%": 0.828
+        },
+        "text_description": "Morooks takımı 10 hafta boyunca toplam 5016.0 sayı attı ve maç başına 501.6 ortalama yakaladı."
+    },
+    {
+        "team_name": "Dirty Thirty",
+        "weeks_counted": 10,
+        "totals": {
+            "PTS": 5348.0,
+            "REB": 1944.0,
+            "AST": 1282.0,
+            "ST": 387.0,
+            "BLK": 270.0,
+            "3PTM": 686.0,
+            "TO": 669.0,
+            "FGM/A": "1930/4158",
+            "FTM/A": "802/1015"
+        },
+        "averages": {
+            "PTS": 534.8,
+            "REB": 194.4,
+            "AST": 128.2,
+            "ST": 38.7,
+            "BLK": 27.0,
+            "3PTM": 68.6,
+            "TO": 66.9,
+            "FG%": 0.464,
+            "FT%": 0.79
+        },
+        "text_description": "Dirty Thirty takımı 10 hafta boyunca toplam 5348.0 sayı attı ve maç başına 534.8 ortalama yakaladı."
+    }
+]

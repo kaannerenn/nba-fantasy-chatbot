@@ -1,0 +1,15 @@
+streamlit==1.52.2
+langchain==0.3.27
+langchain-community==0.3.31
+langchain-core==0.3.81
+langchain-google-genai==2.0.0
+langchain-chroma==0.2.6
+langchain-text-splitters==0.3.11
+chromadb==1.4.0
+pydantic==2.12.5
+python-dotenv==1.2.1
+jq==1.10.0
+numpy==2.2.6
+pandas==2.3.3
+yahoo_oauth
+yahoo_fantasy_api
