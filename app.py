@@ -12,46 +12,42 @@ from langchain.chains import create_retrieval_chain
 
 load_dotenv()
 
-st.set_page_config(page_title="NBA Fantasy AI", layout="wide")
 st.title("🏀 NBA Fantasy Chatbot")
 
-# --- 1. VERİ YÜKLEME VE VERİTABANI (Sadece Başlangıçta) ---
-@st.cache_resource # Veritabanını bir kez yükleyip bellekte tutar
-def initialize_vector_store():
-    embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
-    persist_dir = "nba_fantasy_db"
-    
-    # Eğer klasör yoksa veya boşsa verileri yükle
-    if not os.path.exists(persist_dir) or not os.listdir(persist_dir):
-        # JSON Yükleyiciler
-        loaders = [
-            JSONLoader(file_path='data/nba_fantasy_players.json', jq_schema='.[]', text_content=False),
-            JSONLoader(file_path='data/nba_league_summary.json', jq_schema='.[]', text_content=False)
-        ]
-        data = []
-        for loader in loaders:
-            data.extend(loader.load())
-            
-        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-        docs = text_splitter.split_documents(data)
-        
-        vector_store = Chroma.from_documents(
-            documents=docs, 
-            embedding=embeddings, 
-            persist_directory=persist_dir
-        )
-    else:
-        vector_store = Chroma(persist_directory=persist_dir, embedding_function=embeddings)
-    
-    return vector_store
+player_loader = JSONLoader(
+    file_path='data/nba_fantasy_players.json',
+    jq_schema='.[]',
+    text_content=False
+)
+player_data = player_loader.load()
 
-vector_store = initialize_vector_store()
+team_loader = JSONLoader(
+    file_path='data/nba_league_summary.json',
+    jq_schema='.[]',
+    text_content=False
+)
+team_data = team_loader.load()
+
+data = player_data + team_data
+
+text_splitter = RecursiveCharacterTextSplitter(
+    chunk_size=1000, 
+    chunk_overlap=0
+)
+
+docs = text_splitter.split_documents(data)
+
+embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
+
+vector_store = Chroma(
+    embedding_function=embeddings,
+    persist_directory="nba_fantasy_db"
+)
+
 retriever = vector_store.as_retriever(search_kwargs={"k": 10})
 
-# --- 2. MODELLER VE PROMPTLAR ---
-llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite", temperature=0.3)
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite", temperature=0.3,max_tokens=500)
 
-# Intent Classifier
 intent_system_prompt = """Analyze the question and return ONLY ONE word: 
 TRADE, STATS, GREETING, or GENERAL.
 Question: {query}"""
@@ -59,11 +55,40 @@ intent_prompt = ChatPromptTemplate.from_template(intent_system_prompt)
 intent_chain = intent_prompt | llm | StrOutputParser()
 
 # Özelleştirilmiş Promptlar
-stats_prompt_str = "You are an NBA Data Analyst. Find maximum values. Cite numbers.\nContext:\n{context}"
-trade_prompt_str = "You are a Trade Consultant. Compare players. Say 'Accept' or 'Decline'.\nContext:\n{context}"
+stats_prompt_str = stats_prompt_str = """You are an NBA Data Analyst. Your goal is to provide precise statistical rankings.
+
+Follow these steps:
+1. Extract all players and their relevant numeric values (e.g., AVG_PTS, TOTAL_REB) from the provided Context.
+2. Convert these text-based numbers into a mental list and SORT them numerically (Descending/Ascending as requested).
+3. If the user asks for "top" or "highest", provide the top results based on your sorted list.
+4. Always cite the exact numbers for each player mentioned.
+5. If the data for a specific player is not in the context, state that you don't have that information.
+
+Context:
+{context}
+
+Question: {input}"""
+trade_prompt_str = """You are a professional NBA Fantasy Trade Consultant. 
+Use the provided Context to analyze trades and team needs.
+
+CORE INSTRUCTIONS:
+1. IF TWO PLAYERS ARE PROVIDED: Compare their statistics (AVG_PTS, AVG_REB, AVG_AST, AVG_ST, AVG_BLK, FG_PCT, etc.). Analyze who wins the trade based on which categories they improve. Say 'Accept' or 'Decline' at the end.
+2. IF USER ASKS FOR A 'FAIR TRADE': Look through the Context for players who have similar statistical profiles (e.g., similar AVG_PTS and similar roles). Suggest 2-3 names that would be a fair swap based on their overall contribution.
+3. IF USER WANTS TO IMPROVE A SPECIFIC STAT (e.g., "I need more blocks"): 
+   - Identify players in the Context who have high values in that specific category (e.g., high AVG_BLK).
+   - Suggest a strategic swap: "Trade a player with high AVG_AST for a player with high AVG_BLK if you need defensive stats."
+
+CONSTRAINTS:
+- Use ONLY the provided Context data. No external NBA knowledge.
+- If you don't have enough players in the Context to make a suggestion, say so.
+- Be concise and strategic.
+
+Context:
+{context}
+
+Question: {input}"""
 general_prompt_str = "You are a professional NBA Fantasy expert.\nContext:\n{context}"
 
-# --- 3. ANA AKIŞ ---
 query = st.text_input("Ask a question about NBA Fantasy Basketball:")
 
 if query:
@@ -72,9 +97,9 @@ if query:
         intent = intent_chain.invoke({"query": query}).strip().upper()
         
         if "GREETING" in intent:
-            st.info("👋 Hello! I am your NBA Fantasy assistant. You can ask me for player stats or trade advice!")
+            st.info("Hello! I am your NBA Fantasy assistant. You can ask me for player stats or trade advice!")
         else:
-            # Doğru Promptu Seç
+            # Uygun Promptu Seç
             if "TRADE" in intent:
                 sys_prompt = trade_prompt_str
             elif "STATS" in intent:
@@ -82,7 +107,6 @@ if query:
             else:
                 sys_prompt = general_prompt_str
             
-            # Dinamik Zincir Oluşturma
             qa_prompt = ChatPromptTemplate.from_messages([
                 ("system", sys_prompt),
                 ("user", "{input}"),
@@ -94,5 +118,5 @@ if query:
             # Yanıt Üret
             response = rag_chain.invoke({"input": query})
             
-            st.caption(f"🛡️ Intent: {intent} Mode Activated")
+            st.caption(f"Intent: {intent} Mode Activated")
             st.markdown(response["answer"])
