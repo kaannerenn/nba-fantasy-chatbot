@@ -30,6 +30,7 @@ team_data = team_loader.load()
 
 data = player_data + team_data
 
+# Chunking işlemi aslında gereksiz çünkü zaten 452 data var bunları hiç ayırmıyor.
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size=1000, 
     chunk_overlap=0
@@ -54,8 +55,7 @@ Question: {query}"""
 intent_prompt = ChatPromptTemplate.from_template(intent_system_prompt)
 intent_chain = intent_prompt | llm | StrOutputParser()
 
-# Özelleştirilmiş Promptlar
-stats_prompt_str = stats_prompt_str = """You are an NBA Data Analyst. Your goal is to provide precise statistical rankings.
+stats_prompt_str = """You are an NBA Data Analyst. Your goal is to provide precise statistical rankings.
 
 Follow these steps:
 1. Extract all players and their relevant numeric values (e.g., AVG_PTS, TOTAL_REB) from the provided Context.
@@ -118,5 +118,9 @@ if query:
             # Yanıt Üret
             response = rag_chain.invoke({"input": query})
             
-            st.caption(f"Intent: {intent} Mode Activated")
+            if intent == "STATS":
+                st.caption("Statistical analysis")
+            elif intent == "TRADE":
+                st.caption("Trade evaluation")
+
             st.markdown(response["answer"])
