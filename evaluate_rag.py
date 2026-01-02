@@ -31,35 +31,8 @@ retriever = vector_store.as_retriever(
     search_kwargs={"k": 10}  
 )
 
-llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash-lite",
-    temperature=0
-)
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite", temperature=0.3,max_tokens=500)
 
-system_prompt = """
-You are an NBA fantasy basketball expert.
-Answer the question using ONLY the provided context.
-If the answer is not in the context, say "I don't know".
-
-Context:
-{context}
-"""
-
-prompt = ChatPromptTemplate.from_messages([
-    ("system", system_prompt),
-    ("user", "{input}")
-])
-
-qa_chain = create_stuff_documents_chain(llm, prompt)
-rag_chain = create_retrieval_chain(retriever, qa_chain)
-
-intent_prompt = ChatPromptTemplate.from_template("""
-Analyze the question and return ONLY ONE word:
-STATS, TRADE, GENERAL
-Question: {query}
-""")
-
-intent_chain = intent_prompt | llm | StrOutputParser()
 
 test_set = [
     {
