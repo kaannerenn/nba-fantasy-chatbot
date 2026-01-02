@@ -12,7 +12,7 @@ from langchain.chains import create_retrieval_chain
 
 load_dotenv()
 
-st.title("🏀 NBA Fantasy Chatbot")
+st.title("🏀NBA Fantasy Chatbot")
 
 player_loader = JSONLoader(
     file_path='data/nba_fantasy_players.json',
