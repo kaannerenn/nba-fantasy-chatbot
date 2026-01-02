@@ -60,3 +60,11 @@ python convert_to_avg_total.py
 ```bash
 streamlit run app.py
 ```
+
+## Uygulama Demo Gösterim Videosu
+
+Projenin çalışma mantığını ve örnek sorguları aşağıdaki videodan izleyebilirsiniz:
+
+[![NBA Chatbot Demo](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_BURAYA/0.jpg)](https://youtu.be/XnEdEGqQztc)
+
+> *Not: Videoyu izlemek için yukarıdaki görsele tıklayın.*
